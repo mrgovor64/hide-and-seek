@@ -1,0 +1,64 @@
+#chat_window {
+  overflow-y: scroll;
+  text-align: left;
+}
+#chat_window > div {
+  margin-bottom: 5px;
+}
+#chat_window .red {
+  color: red;
+}
+#chat_form {
+  width: 100%;
+}
+#chat_line {
+  width: calc(100% - 25px);
+}
+#map {
+  width: 100%;
+  height: 400px;
+}
+.hide_text {
+  margin-bottom:10px;
+  display: none;
+}
+.hide_text.active {
+  display: block;
+}
+.statistic_table {
+  width:100%;
+  text-align: center;
+  margin: 20px 0;
+}
+.icon {
+  width:32px;
+  height: 32px;
+}
+.menu {
+  text-align: center;
+  font-size: 0;
+  margin-bottom: 10px;
+}
+.menu .menu_el {
+  font-size: 16px;
+  display: inline-block;
+  border-bottom: 1px white solid;
+  padding: 10px 20px;
+  margin: 0;
+  cursor: pointer;
+}
+.menu .menu_el.active {
+  border: 1px white solid;
+  border-bottom: 0;
+}
+.me {
+  color: GreenYellow;
+}
+@media (max-width:470px){
+  .my_menu .item .menu_item {
+    display: none;
+  }
+  .my_menu .item.active .menu_item {
+    display: block;
+  }
+}

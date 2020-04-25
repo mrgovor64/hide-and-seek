@@ -1,0 +1,41 @@
+#map {
+  height: 400px;
+}
+#players_list table {
+  width: 100%;
+}
+#chat_window {
+  overflow-y: scroll;
+  text-align: left;
+}
+#chat_window > div {
+  margin-bottom: 5px;
+}
+#chat_window .red {
+  color: red;
+}
+#chat_form {
+  width: 100%;
+}
+#chat_line {
+  width: calc(100% - 25px);
+}
+.points {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+@media (min-width:361px) AND (max-width:540px){
+  .my_menu .item .menu_item {
+    display: none;
+  }
+  .my_menu .item.active .menu_item {
+    display: block;
+  }
+}
+@media (max-width:360px){
+  .my_menu .item .menu_item {
+    display: none;
+  }
+}

@@ -1,0 +1,15 @@
+RewriteEngine on
+RewriteCond %{SERVER_PORT} !^443$
+#RewriteRule ^/?(.*) https://%{HTTP_HOST}/$1 [NC,R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([а-яА-Яa-zA-Z0-9\-\_\%]+)$ index.php?page=$1 [L,QSA]
+RewriteRule ^([а-яА-Яa-zA-Z0-9\-\_\%]+)/$ index.php?page=$1 [L,QSA]
+RewriteRule ^([а-яА-Яa-zA-Z0-9\-\_\%]+)/([а-яА-Яa-zA-Z0-9\-\_\%]+)$ index.php?page=$1&variable_2=$2 [L,QSA]
+RewriteRule ^([а-яА-Яa-zA-Z0-9\-\_\%]+)/([а-яА-Яa-zA-Z0-9\-\_\%]+)/$ index.php?page=$1&variable_2=$2 [L,QSA]
+RewriteRule ^([а-яА-Яa-zA-Z0-9\-\_\%]+)/([а-яА-Яa-zA-Z0-9\-\_\%]+)/([а-яА-Яa-zA-Z0-9\-\_\%]+)$ index.php?page=$1&variable_2=$2&variable_3=$3 [L,QSA]
+RewriteRule ^([а-яА-Яa-zA-Z0-9\-\_\%]+)/([а-яА-Яa-zA-Z0-9\-\_\%]+)/([а-яА-Яa-zA-Z0-9\-\_\%]+)/$ index.php?page=$1&variable_2=$2&variable_3=$3 [L,QSA]
+RewriteRule ^([а-яА-Яa-zA-Z0-9\-\_\%]+)/([а-яА-Яa-zA-Z0-9\-\_\%]+)/([а-яА-Яa-zA-Z0-9\-\_\%]+)/([а-яА-Яa-zA-Z0-9\-\_\%\=]+)$ index.php?page=$1&variable_2=$2&variable_3=$3&variable_4=$4 [L,QSA]
+RewriteRule ^([а-яА-Яa-zA-Z0-9\-\_\%]+)/([а-яА-Яa-zA-Z0-9\-\_\%]+)/([а-яА-Яa-zA-Z0-9\-\_\%]+)/([а-яА-Яa-zA-Z0-9\-\_\%]+)/$ index.php?page=$1&variable_2=$2&variable_3=$3&variable_4=$4 [L,QSA]

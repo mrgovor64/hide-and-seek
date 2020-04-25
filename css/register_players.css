@@ -1,0 +1,10 @@
+#register_table {
+  margin: 0 auto;
+}
+#players_list_h {
+  margin: 30px auto 10px;
+  text-align: center;
+}
+#players_list table{
+  width: 100%;
+}
